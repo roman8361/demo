@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head></h:head>
+
+
+<h:body>
+    <p:outputPanel>
+        <p:outputLabel value="DATE SERVICE SPRING-BOOT"/>
+    </p:outputPanel>
+
+    <p:spacer height="10"/>
+
+    <h:form>
+
+        <p:outputPanel>
+            <p:outputLabel id="outputLabelSb" value="#{dateController.sbDate}"/>
+        </p:outputPanel>
+
+
+        <p:outputPanel>
+            <p:commandButton update="outputLabelSb" value="getCurrentSprintBoot Date"
+                             actionListener="#{dateController.initSbDate}"/>
+        </p:outputPanel>
+
+
+    </h:form>
+
+
+
+    <p:outputPanel>
+        <p:outputLabel value="DATE JSF"/>
+    </p:outputPanel>
+
+    <p:spacer height="10"/>
+
+    <h:form>
+
+        <p:outputPanel>
+            <p:outputLabel id="outputLabelJsf" value="#{dateController.jsfDate}"/>
+        </p:outputPanel>
+
+        <p:spacer height="10"/>
+
+        <p:outputPanel>
+            <p:commandButton update="outputLabelJsf" value="getCurrentFsjDate"
+                             actionListener="#{dateController.initJsfDate}"/>
+        </p:outputPanel>
+
+    </h:form>
+
+</h:body>
+
+
+</html>
